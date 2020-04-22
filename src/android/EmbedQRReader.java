@@ -57,7 +57,7 @@ public class EmbedQRReader extends Fragment {
 
 			lastReadTime = newReadTime;
 			lastText = result.getText();
-			barcodeView.setStatusText(result.getText());
+			//barcodeView.setStatusText(result.getText());
 			beepManager.playBeepSoundAndVibrate();
 
 			eventListener.onBarcodeRead(lastText);
@@ -99,6 +99,9 @@ public class EmbedQRReader extends Fragment {
 
 		//start scanning
 		barcodeView.decodeContinuous(callback);
+    
+    //borrar texto
+		barcodeView.setStatusText("");
 
 		beepManager = new BeepManager(getActivity());
 		return view;
