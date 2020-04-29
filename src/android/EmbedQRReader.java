@@ -100,8 +100,8 @@ public class EmbedQRReader extends Fragment {
 		//start scanning
 		barcodeView.decodeContinuous(callback);
     
-    //borrar texto
-		barcodeView.setStatusText("");
+    //Set init text
+		barcodeView.setStatusText("Please scan label");
 
 		beepManager = new BeepManager(getActivity());
 		return view;
