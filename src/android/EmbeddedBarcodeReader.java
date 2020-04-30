@@ -111,6 +111,7 @@ public class EmbeddedBarcodeReader extends CordovaPlugin implements EmbedQRReade
 					this.execArgs.getString(4),
 					this.execArgs.getBoolean(7),
 					this.execArgs.getString(8),
+					this.execArgs.getString(9),
 					this.execCallback);
 		}
 	}
