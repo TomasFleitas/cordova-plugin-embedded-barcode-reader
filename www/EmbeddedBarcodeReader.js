@@ -16,17 +16,21 @@ EmbeddedBarcodeReader.startCamera = function(options, onSuccess, onError) {
     options.y = options.y || 0;
     options.width = options.width || window.screen.width;
     options.height = options.height || window.screen.height;
+    options.text = options.text || 'Please scan label';
+
     options.camera = options.camera || EmbeddedBarcodeReader.CAMERA_DIRECTION.FRONT;
     if (typeof(options.tapPhoto) === 'undefined') {
         options.tapPhoto = true;
     }
+
     options.previewDrag = options.previewDrag || false;
     options.toBack = options.toBack || false;
     if (typeof(options.alpha) === 'undefined') {
         options.alpha = 1;
     }
+    
 
-    exec(onSuccess, onError, PLUGIN_NAME, "startReading", [options.x, options.y, options.width, options.height, options.camera, options.tapPhoto, options.previewDrag, options.toBack, options.alpha]);
+    exec(onSuccess, onError, PLUGIN_NAME, "startReading", [options.x, options.y, options.width, options.height, options.camera, options.tapPhoto, options.previewDrag, options.toBack, options.alpha,options.text]);
 };
 
 EmbeddedBarcodeReader.addBarcodeReadListener = function(onSuccess, onError) {

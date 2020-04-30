@@ -41,6 +41,7 @@ public class EmbedQRReader extends Fragment {
 	private Date lastReadTime = new Date();
 	private String lastText;
 	private int numberOfCameras = 0;
+	private String text;
 
 	private View view;
 
@@ -101,7 +102,7 @@ public class EmbedQRReader extends Fragment {
 		barcodeView.decodeContinuous(callback);
     
     //Set init text
-		barcodeView.setStatusText("Please scan label");
+	//barcodeView.setStatusText("Please scan label");
 
 		beepManager = new BeepManager(getActivity());
 		return view;
@@ -203,4 +204,9 @@ public class EmbedQRReader extends Fragment {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		return barcodeView.onKeyDown(keyCode, event) || super.onKeyDown(keyCode, event);
 	}*/
+
+
+	setText(String text){
+		barcodeView.setStatusText(text);
+	}
 }

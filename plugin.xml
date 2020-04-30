@@ -6,8 +6,8 @@
   <description>Cordova plugin that allows barcode reading from HTML code. Show camera preview popup on top of the HTML.</description>
   <license>Apache 2.0</license>
   <keywords>cordova,phonegap,ecosystem:cordova,cordova-android,cordova-ios,android,ios,ionic,camera,cam,camera-preview,preview</keywords>
-  <repo>https://github.com/CodifiLLC/cordova-plugin-embedded-barcode-reader/cordova-plugin-embedded-barcode-reader.git</repo>
-  <issue>https://github.com/CodifiLLC/cordova-plugin-embedded-barcode-reader/cordova-plugin-embedded-barcode-reader/issues</issue>
+  <repo>https://github.com/TomasFleitas/cordova-plugin-embedded-barcode-reader/cordova-plugin-embedded-barcode-reader.git</repo>
+  <issue>https://github.com/TomasFleitas/cordova-plugin-embedded-barcode-reader/cordova-plugin-embedded-barcode-reader/issues</issue>
 
   <js-module src="www/EmbeddedBarcodeReader.js" name="EmbeddedBarcodeReader">
     <clobbers target="EmbeddedBarcodeReader" />

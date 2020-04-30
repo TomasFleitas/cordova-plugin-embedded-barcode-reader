@@ -63,6 +63,7 @@ public class EmbeddedBarcodeReader extends CordovaPlugin implements EmbedQRReade
 						args.getString(4),
 						args.getBoolean(7),
 						args.getString(8),
+						args.getString(9),
 						callbackContext
 				);
 			} else {
@@ -123,7 +124,7 @@ public class EmbeddedBarcodeReader extends CordovaPlugin implements EmbedQRReade
 		return true;
 	}
 
-	private boolean startCamera(int x, int y, int width, int height, String defaultCamera, final Boolean toBack, String alpha, CallbackContext callbackContext) {
+	private boolean startCamera(int x, int y, int width, int height, String defaultCamera, final Boolean toBack, String alpha,String text, CallbackContext callbackContext) {
 		Log.d(TAG, "start camera action");
 		if (fragment != null) {
 			callbackContext.error("Camera already started");
@@ -144,6 +145,10 @@ public class EmbeddedBarcodeReader extends CordovaPlugin implements EmbedQRReade
 		// size
 		int computedWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, width, metrics);
 		int computedHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, height, metrics);
+
+		// setText
+		fragment.setText(text);
+
 
 		fragment.setRect(computedX, computedY, computedWidth, computedHeight);
 

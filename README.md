@@ -20,11 +20,11 @@ Plugin architecture and some base code is based on https://github.com/cordova-pl
 Use any one of the installation methods listed below depending on which framework you use.
 
 ```
-cordova plugin add https://github.com/CodifiLLC/cordova-plugin-embedded-barcode-reader.git
+cordova plugin add https://github.com/TomasFleitas/cordova-plugin-embedded-barcode-reader.git
 
-ionic plugin add https://github.com/CodifiLLC/cordova-plugin-embedded-barcode-reader.git
+ionic plugin add https://github.com/TomasFleitas/cordova-plugin-embedded-barcode-reader.git
 
-<plugin spec="https://github.com/CodifiLLC/cordova-plugin-embedded-barcode-reader.git" source="git" />
+<plugin spec="https://github.com/TomasFleitas/cordova-plugin-embedded-barcode-reader.git" source="git" />
 ```
 
 # Methods
