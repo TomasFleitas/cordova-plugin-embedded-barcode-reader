@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import javafx.scene.text.TextBoundsType;
 
 import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.BeepManager;
@@ -41,6 +42,7 @@ public class EmbedQRReader extends Fragment {
 	private Date lastReadTime = new Date();
 	private String lastText;
 	private int numberOfCameras = 0;
+
 
 	private View view;
 
@@ -76,6 +78,7 @@ public class EmbedQRReader extends Fragment {
 	private int y;
 	private int width;
 	private int height;
+	private String text;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -100,8 +103,8 @@ public class EmbedQRReader extends Fragment {
 		//start scanning
 		barcodeView.decodeContinuous(callback);
     
-    //Set init text
-		barcodeView.setStatusText("Please scan label");
+    	//Set init text
+		barcodeView.setStatusText(text);
 
 		beepManager = new BeepManager(getActivity());
 		return view;
@@ -203,4 +206,9 @@ public class EmbedQRReader extends Fragment {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		return barcodeView.onKeyDown(keyCode, event) || super.onKeyDown(keyCode, event);
 	}*/
+
+
+	void setText(String text){
+		this.text = text;
+	}
 }
