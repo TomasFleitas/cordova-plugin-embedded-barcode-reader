@@ -206,7 +206,7 @@ public class EmbedQRReader extends Fragment {
 	}*/
 
 
-	setText(String text){
+	void setText(String text){
 		barcodeView.setStatusText(text);
 	}
 }
