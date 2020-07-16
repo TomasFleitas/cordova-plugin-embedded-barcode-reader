@@ -56,6 +56,7 @@ import AVFoundation
     var lastRead:String = ""
     var lastTimeRead: Date = Date.init()
     var captureDevice: AVCaptureDevice?
+    var text:String = ""
     
     override func pluginInitialize() {
         super.pluginInitialize()
@@ -79,6 +80,9 @@ import AVFoundation
             yPoint = CGFloat((command.arguments[1] as AnyObject!).floatValue) + self.webView.frame.origin.y
             width = CGFloat((command.arguments[2] as AnyObject!).floatValue)
             height = CGFloat((command.arguments[3] as AnyObject!).floatValue)
+
+            //get text from bundle
+            text = (command.arguments[9] as AnyObject!)
             
             // Get an instance of the AVCaptureDeviceInput class using the previous device object.
             let input = try AVCaptureDeviceInput(device: captureDevice)

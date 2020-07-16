@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import javafx.scene.text.TextBoundsType;
 
 import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.BeepManager;
@@ -102,7 +101,7 @@ public class EmbedQRReader extends Fragment {
 
 		//start scanning
 		barcodeView.decodeContinuous(callback);
-    
+
     	//Set init text
 		barcodeView.setStatusText(text);
 
